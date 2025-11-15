@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Navbar } from "@/components/Navbar";
 import { KPICard } from "@/components/KPICard";
 import { AnimatedChart } from "@/components/AnimatedChart";
 import {
@@ -75,17 +76,16 @@ const departmentData = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      <Navbar />
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         <motion.header
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Health Analytics Dashboard
-          </h1>
-          <p className="text-muted-foreground mt-2">
+          <h1 className="text-3xl font-bold">Dashboard Overview</h1>
+          <p className="text-muted-foreground mt-1">
             Real-time insights into patient care and hospital operations
           </p>
         </motion.header>
